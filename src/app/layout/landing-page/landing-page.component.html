@@ -1,0 +1,11 @@
+<app-nav-bar (openClose)="toggleSidebar($event)"></app-nav-bar>
+<div class="row">
+    <ng-container>
+        <div class="col-md-3 col-xl-2 px-sm-2 px-0 bg-primary" [ngClass]="{'collapsed': isCollapsed}">
+            <app-side-bar [isCollapsed]="isCollapsed"></app-side-bar>
+        </div>
+    </ng-container>
+    <div class="col-md-9">
+        <router-outlet></router-outlet>
+    </div>
+</div>

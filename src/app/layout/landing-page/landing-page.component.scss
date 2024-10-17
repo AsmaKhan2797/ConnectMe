@@ -1,0 +1,126 @@
+.post {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.post img {
+  width: 100%;
+  height: auto;
+}
+
+.post-title {
+  font-weight: bold;
+  margin: 10px;
+}
+
+body {
+  background-color: #f8f9fa;
+  font-size: .875rem;
+}
+
+.feather {
+  width: 16px;
+  height: 16px;
+  vertical-align: text-bottom;
+}
+
+/*
+   * Sidebar
+   */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  /* Behind the navbar */
+  padding: 0 0 0;
+  /* Height of navbar */
+  box-shadow: inset 1px 0 0 rgba(0, 0, 0, .1);
+}
+
+@media (max-width: 767.98px) {
+  .sidebar {
+    top: 5rem;
+  }
+}
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: .5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* Scrollable contents if viewport is shorter than content. */
+}
+
+.sidebar .nav-link {
+  font-weight: 500;
+  color: #333;
+}
+
+.sidebar .nav-link .feather {
+  margin-left: 4px;
+  color: #727272;
+}
+
+.sidebar .nav-link.active {
+  color: #2470dc;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+  color: inherit;
+}
+
+.sidebar-heading {
+  font-size: .75rem;
+  text-transform: uppercase;
+}
+
+.collapsed {
+  width: 80px; /* Width when collapsed */
+}
+
+.sidebar.collapsed a {
+  justify-content: center; /* Center the icons */
+}
+
+.sidebar.collapsed {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar.collapsed li {
+  display: flex;
+  justify-content: center; /* Center the content */
+}
+
+.sidebar.collapsed li span {
+  display: none; /* Hide text labels */
+}
+
+.sidebar.collapsed li:hover span {
+  display: inline; /* Show text on hover */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+.post-card {
+  margin-bottom: 20px;
+}
+
+.row {
+  width: 110%;
+}

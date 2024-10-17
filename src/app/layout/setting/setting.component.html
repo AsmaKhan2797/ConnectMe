@@ -1,0 +1,87 @@
+<div class="container settings-container">
+    <h2>Settings</h2>
+
+    <!-- Account Settings -->
+    <div class="setting-item">
+      <div class="section-title">Account Settings</div>
+      <form>
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" class="form-control" id="username" value="john_doe">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" class="form-control" id="email" value="john@example.com">
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Change password">
+        </div>
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+      </form>
+    </div>
+
+    <!-- Notifications Settings -->
+    <div class="setting-item">
+      <div class="section-title">Notifications</div>
+      <form>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="emailNotifications" checked>
+          <label class="form-check-label" for="emailNotifications">Email Notifications</label>
+        </div>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="smsNotifications">
+          <label class="form-check-label" for="smsNotifications">SMS Notifications</label>
+        </div>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="pushNotifications" checked>
+          <label class="form-check-label" for="pushNotifications">Push Notifications</label>
+        </div>
+      </form>
+    </div>
+
+    <!-- Privacy Settings -->
+    <div class="setting-item">
+      <div class="section-title">Privacy</div>
+      <form>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="profileVisibility" checked>
+          <label class="form-check-label" for="profileVisibility">Show Profile Publicly</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="locationSharing">
+          <label class="form-check-label" for="locationSharing">Enable Location Sharing</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="searchEngineIndexing" checked>
+          <label class="form-check-label" for="searchEngineIndexing">Allow Search Engines to Index Profile</label>
+        </div>
+      </form>
+    </div>
+
+    <!-- Security Settings -->
+    <div class="setting-item">
+      <div class="section-title">Security</div>
+      <form>
+        <div class="mb-3">
+          <label for="twoFactorAuth" class="form-label">Two-Factor Authentication</label>
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="twoFactorAuth" checked>
+            <label class="form-check-label" for="twoFactorAuth">Enable Two-Factor Authentication</label>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="loginAlerts" class="form-label">Login Alerts</label>
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="loginAlerts" checked>
+            <label class="form-check-label" for="loginAlerts">Send Alerts on Unrecognized Logins</label>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Save Button -->
+    <div class="text-end">
+      <button type="submit" class="btn btn-primary">Save All Settings</button>
+    </div>
+  </div>

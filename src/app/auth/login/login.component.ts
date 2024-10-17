@@ -1,0 +1,43 @@
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth.service';
+import { UserCredentials } from '../models/UserCredentials';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+
+@Component({
+  selector: 'app-login',
+  standalone: true,
+  imports: [],
+  templateUrl: './login.component.html',
+  styleUrl: './login.component.scss'
+})
+export class LoginComponent implements OnInit {
+
+ userCredentials: UserCredentials
+ 
+
+  constructor(public authService: AuthService, private fb: FormBuilder,public loginForm: FormGroup, public router: Router) {
+    this.userCredentials = {}
+  }
+
+  ngOnInit(): void {
+    this.createForm();
+  }
+
+  createForm(): void {
+    this.loginForm = this.fb.group({});
+  }
+
+  login() {
+    this.authService.login(this.userCredentials).subscribe((data) => {
+      if(null != data.userId) {
+        this.route();
+      }
+    });
+  }
+
+  route(): void {
+    this.router.navigateByUrl("/home");
+  }
+
+}
