@@ -13,10 +13,10 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
- userCredentials: UserCredentials
- 
+  userCredentials: UserCredentials
+  loginForm: FormGroup | undefined;
 
-  constructor(public authService: AuthService, private fb: FormBuilder,public loginForm: FormGroup, public router: Router) {
+  constructor(private authService: AuthService, private fb: FormBuilder, private router: Router) {
     this.userCredentials = {}
   }
 
@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.authService.login(this.userCredentials).subscribe((data) => {
-      if(null != data.userId) {
+      if (null != data.userId) {
         this.route();
       }
     });
