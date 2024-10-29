@@ -9,5 +9,12 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './side-bar.component.scss'
 })
 export class SideBarComponent {
-  @Input("isCollapsed") isCollapsed = false;
+  @Output() openClose: EventEmitter<any> = new EventEmitter();
+
+  isCollapsed = false;
+
+  toggleSidebar() {
+    this.isCollapsed = !this.isCollapsed;
+    this.openClose.emit(this.isCollapsed);
+  }
 }

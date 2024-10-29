@@ -8,7 +8,7 @@ import { UserCredentials } from '../models/UserCredentials';
 })
 export class AuthService {
 
-  constructor(public httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient) {}
 
   login(userCredentials: UserCredentials) : Observable<any> {
     var url = "login";

@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Profile } from '../../models/Profile';
 
 @Component({
   selector: 'app-nav-bar',
@@ -8,14 +9,6 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrl: './nav-bar.component.scss'
 })
 export class NavBarComponent {
-
-  @Output() openClose: EventEmitter<any> = new EventEmitter();
-
-  isCollapsed = false;
-
-  toggleSidebar() {
-    this.isCollapsed = !this.isCollapsed;
-    this.openClose.emit(this.isCollapsed);
-  }
-
+  @Input("profile") profile: Profile | undefined;
+  @Input("imageUrl") imageUrl: any;
 }
